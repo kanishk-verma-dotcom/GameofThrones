@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<title>CA682 GameOfThrones Visualisation by Kanishk Verma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+ 
+  position: absolute;
+  z-index: 1;
+}
+
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<body>
+<div>
+<center><h2> 
+	Word Clouds on Five Books of A Song of Ice and Fire by George R.R. Martin
+	</h2></center>
+<div align="center" style:"border:1px solid black">
+	<h3> 1st Book - A Game Of Thrones </h3>
+		<div class="tooltip"> 
+			<img class = "mySlides w3-animate-fading" src="book1_wc.jpg" style="max-width:100%">
+				<span class="tooltiptext">Stark House Sigil</span>
+		</div>
+		<h3> 2nd Book - A Clash Of Kings </h3>
+		<div class="tooltip"> 
+			 <img class = "mySlides w3-animate-fading" src="book2_wc.jpg" style="max-width:100%">
+				<span class="tooltiptext">That's Tyrion Lannister</span>
+		</div>
+		<h3> 3rd Book - A Song Of Swords </h3> 
+		<div class="tooltip"> 
+			<img class = "mySlides w3-animate-fading" src="book3_wc.jpg" style="max-width:100%">
+				<span class="tooltiptext">Lannister House Sigil</span>
+		</div>
+		<h3> 4th Book - A Feast For Crows </h3>
+		<div class="tooltip"> 
+			 <img class = "mySlides w3-animate-fading" src="book4_wc.jpg" style="max-width:100%">
+				<span class="tooltiptext">Targaryen House Sigil</span>
+		</div>
+		<h3> 5th Book - A Dance With Dragons </h3>
+		<div class="tooltip"> 
+			 <img class = "mySlides w3-animate-fading" src="book5_wc.jpg" style="max-width:100%">
+				<span class="tooltiptext">That's Queen Cersei Lannister</span>
+		</div>		
+</div>
+</div>
+<script>
+
+var myIndex = 0;
+
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 10000);    
+}
+
+</script>
+
+</body>
+</html>
